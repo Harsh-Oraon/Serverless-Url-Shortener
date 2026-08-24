@@ -24,7 +24,7 @@ DynamoDB (stores short_code -> long_url mappings)
 - `GET /links/{code}` — redirects to the original URL
 
 ## Tech
-- Python 3.x
+- Python 3.13
 - boto3 (AWS SDK)
 
 ## Status
