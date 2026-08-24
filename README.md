@@ -29,7 +29,7 @@ DynamoDB (stores short_code -> long_url mappings)
 
 ## Status
 - [x] Lambda functions written
-- [ ] DynamoDB table created
-- [ ] Lambda functions deployed
+- [x] DynamoDB table created
+- [x] Lambda functions deployed
 - [ ] API Gateway configured
 - [ ] Live and tested
