@@ -11,16 +11,19 @@ Example:
 
 ## Architecture
 
-Browser
-|
-v
-API Gateway (HTTP endpoint)
-|
-v
-Lambda (create_link.py / redirect_link.py)
-|
-v
-DynamoDB (stores short_code -> long_url mappings)
+                    Browser
+                   /        \
+                  v          v
+          CloudFront      API Gateway
+          (CDN+HTTPS)    (HTTP endpoints)
+              |                |
+              v                v
+          S3 bucket      Lambda functions
+        (static files)  (create + redirect)
+                                |
+                                v
+                            DynamoDB
+                        (code -> url mapping)
 
 
 - **API Gateway** exposes two HTTP routes and forwards requests to Lambda
