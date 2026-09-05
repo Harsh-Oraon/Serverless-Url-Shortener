@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Link Shrink — URL Shortener</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="nav">
+  <span class="nav-mark">/ link-shrink</span>
+  <a class="nav-link" href="https://github.com/Harsh-Oraon/Serverless-Url-Shortener" target="_blank" rel="noopener">GitHub ↗</a>
+</nav>
+
+<main class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">serverless · Lambda + API Gateway + DynamoDB</p>
+    <h1>Shrink a link.</h1>
+    <p class="hero-sub">Paste a long URL, get a short one back. No server running behind this — just AWS doing its thing on demand.</p>
+
+    <form id="shorten-form" class="shorten-form">
+      <input
+        type="url"
+        id="url-input"
+        placeholder="https://your-long-url-here.com"
+        required
+        autocomplete="off"
+      >
+      <button type="submit" id="submit-btn">Shorten</button>
+    </form>
+
+    <p id="error-msg" class="error-msg" hidden></p>
+
+    <div id="result" class="result" hidden>
+      <a id="short-link" class="short-link" target="_blank" rel="noopener"></a>
+      <button id="copy-btn" class="copy-btn">Copy</button>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <span>Built with AWS Lambda, API Gateway &amp; DynamoDB — deployed on S3 + CloudFront.</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
