@@ -2,8 +2,8 @@
 
 A serverless URL shortener built on AWS — submit a long URL, get back a short code, and visiting the short link redirects to the original URL.
 
-## Live API
-Base URL: https://sgp3fkd9h9.execute-api.ap-south-1.amazonaws.com
+## Live site
+https://d3hxhtraidud4a.cloudfront.net/
 
 Example:
 - Create: `POST /links` with body `{"url": "https://example.com"}`
@@ -41,3 +41,8 @@ DynamoDB (stores short_code -> long_url mappings)
 - [x] Lambda functions deployed and tested individually
 - [x] API Gateway configured
 - [x] Live and tested end-to-end
+
+
+- [x] Site built
+- [x] Deployed to S3
+- [x] CloudFront distribution live
